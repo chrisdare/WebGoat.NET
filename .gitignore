@@ -192,7 +192,7 @@ $RECYCLE.BIN/
 #################
 WebGoat/App_Data/*.txt
 *.sqlite*
-WebGoat/Configuration/*.config
+/WebGoat/Configuration/*.config
 
 # Trash Files #
 ###############
