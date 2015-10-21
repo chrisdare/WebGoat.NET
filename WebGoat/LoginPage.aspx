@@ -10,7 +10,6 @@
         WebGoat.NET Login</h1>
     <asp:Literal runat="server" EnableViewState="False" ID="labelMessage"></asp:Literal>
     
-    <%--
     <p></p>
     <div class="notice">Get Credentials From Instructor</div>
     <p class="inline">
@@ -23,13 +22,10 @@
             <input runat="server" title="remember" type="checkbox" name="checkboxRemember" id="checkBoxRemember" value="" />
             Remember me
         </label><br />
+                <asp:Button ID="buttonAdminLogOn" SkinID="Button" runat="server" Text="Login" OnClick="ButtonAdminLogOn_Click" />
+
     </p>
-    --%>
-    <p>
-        <asp:Button ID="buttonLogOn" SkinID="Button" runat="server" Text="Customer Login" OnClick="ButtonLogOn_Click" />
-        <p/>
-        <asp:Button ID="buttonAdminLogOn" SkinID="Button" runat="server" Text="Employee Login" OnClick="ButtonAdminLogOn_Click" />
-    </p>
+    
     <hr />
 </asp:Content>
  

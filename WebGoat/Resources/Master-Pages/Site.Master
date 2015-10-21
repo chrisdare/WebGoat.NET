@@ -70,7 +70,7 @@
                     <asp:LinkButton runat="server" Text="Rebuild Database" ID="lbtGenerateTestData" OnClick="lbtGenerateTestData_Click" />
                     |
                     <asp:LoginStatus ID="HeadLoginStatus" runat="server" LogoutAction="Redirect" LogoutText="Logout"
-                        LogoutPageUrl="/WebGoatCoins/Logout.aspx" />
+                        LogoutPageUrl="/Logout.aspx" />
                 </div>
                 <%-- <div class="search-box">
                     <input type="text" id="search" class="text autoclear" accesskey="4" value="Search" />

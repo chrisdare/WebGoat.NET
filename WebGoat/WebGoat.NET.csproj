@@ -18,13 +18,14 @@
     <OldToolsVersion>4.0</OldToolsVersion>
     <UpgradeBackupLocation>
     </UpgradeBackupLocation>
-    <UseIISExpress>false</UseIISExpress>
+    <UseIISExpress>true</UseIISExpress>
     <IISExpressSSLPort />
     <IISExpressAnonymousAuthentication />
     <IISExpressWindowsAuthentication />
     <IISExpressUseClassicPipelineMode />
     <TargetFrameworkProfile />
     <NuGetPackageImportStamp>46e2aded</NuGetPackageImportStamp>
+    <UseGlobalApplicationHostFile />
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -68,8 +69,8 @@
       <HintPath>..\packages\EntityFramework.6.1.2\lib\net45\EntityFramework.SqlServer.dll</HintPath>
     </Reference>
     <Reference Include="log4net, Version=1.2.13.0, Culture=neutral, PublicKeyToken=669e0ddf0bb1aa2a, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>bin\log4net.dll</HintPath>
+      <HintPath>..\packages\log4net.2.0.3\lib\net40-full\log4net.dll</HintPath>
+      <Private>True</Private>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.ComponentModel.DataAnnotations" />
@@ -121,6 +122,7 @@
     <Content Include="Global.asax" />
     <None Include="IIS.pubxml" />
     <None Include="Resources\client-scripts\jquery-1.10.2.intellisense.js" />
+    <Content Include="Logout.aspx" />
     <Content Include="Resources\client-scripts\jquery-1.10.2.js" />
     <Content Include="Resources\client-scripts\jquery-1.10.2.min.js" />
     <Content Include="Resources\client-scripts\jquery-migrate-1.2.1.js" />
@@ -909,6 +911,13 @@
     <Compile Include="Entities\Payments.cs" />
     <Compile Include="Entities\Products.cs" />
     <Compile Include="Entities\SecurityQuestions.cs" />
+    <Compile Include="Logout.aspx.cs">
+      <DependentUpon>Logout.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Logout.aspx.designer.cs">
+      <DependentUpon>Logout.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Resources\Master-Pages\SiteNew.Master.cs">
       <DependentUpon>SiteNew.Master</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -1152,7 +1161,7 @@
           <AutoAssignPort>True</AutoAssignPort>
           <DevelopmentServerPort>3273</DevelopmentServerPort>
           <DevelopmentServerVPath>/</DevelopmentServerVPath>
-          <IISUrl>http://localhost/WebGoat.NET</IISUrl>
+          <IISUrl>http://localhost:3273/</IISUrl>
           <NTLMAuthentication>False</NTLMAuthentication>
           <UseCustomServer>False</UseCustomServer>
           <CustomServerUrl>
