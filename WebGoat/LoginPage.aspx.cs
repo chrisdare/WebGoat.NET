@@ -16,6 +16,20 @@ namespace OWASP.WebGoat.NET
     	{
     	}
     
+    	protected void ButtonLogOn_Click(object sender, EventArgs e)
+    	{
+            Response.Redirect("/WebGoatCoins/CustomerLogin.aspx");
+
+            //if(Membership.ValidateUser(txtUserName.Value.Trim(), txtPassword.Value.Trim()))
+            //{
+            //    FormsAuthentication.RedirectFromLoginPage(txtUserName.Value, true);
+            //}
+            //else
+            //{
+            //    labelMessage.Text = "invalid username";
+            //}
+	    }
+
     	protected void ButtonAdminLogOn_Click(object sender, EventArgs e)
     	{
             if(txtUserName.Value == "admin" && txtPassword.Value == "pass123")
